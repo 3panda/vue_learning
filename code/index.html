@@ -8,10 +8,8 @@
 <body>
   <div id="app">
     <!-- この#appの内側にテンプレートを書き込んでいく -->
-    <input v-model="name">
-    <button v-on:click="doAdd">モンスターを追加</button>
     <ul>
-        <li v-for="(item, index) in list" v-bind:key="item.id">
+        <li v-for="(item, index) in list">
             ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
             <span v-if="item.hp < 50">瀕死</span>
             <button v-on:click="doRemove(index)">モンスターを削除</button>
@@ -19,6 +17,7 @@
         </li>
     </ul>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
 </body>
