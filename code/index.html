@@ -8,10 +8,13 @@
 <body>
   <div id="app">
     <!-- この#appの内側にテンプレートを書き込んでいく -->
-    <li v-for="item in list" v-bind:key="item.id" v-bind:class="{ tuyoi: item.hp > 300 }">
-      ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-      <span v-if="item.hp > 300">つよい！</span>
-    </li>
+    <input v-model="name">
+    <button v-on:click="doAdd">モンスターを追加</button>
+    <ul>
+        <li v-for="item in list" v-bind:key="item.id">
+            ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+         </li>
+    </ul>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
