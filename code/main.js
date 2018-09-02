@@ -23,6 +23,9 @@ var app = new Vue({
         doRemove : function (index) {
             //
             this.list.splice(index, 1);
+        },
+        doAttack: function (index) {
+            this.list[index].hp -= 10 // hpを減らす
         }
     }
   })
