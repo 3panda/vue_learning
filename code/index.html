@@ -6,14 +6,11 @@
   <link href="main.css" rel="stylesheet">
 </head>
 <body>
-  <div id="app">
-    <!-- この#appの内側にテンプレートを書き込んでいく -->
-    <button v-on:click="handleClick">カウントアップ</button>
-    <button v-on:click="show=!show">表示/非表示</button>
-    <span ref="count" v-if="show">0</span>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-  <script src="main.js"></script>
+    <div id="app" v-cloak>
+        {{ message }}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,9 +1,14 @@
 /* StyleSheet */
-.item {
-    padding: 4px 8px;
-    transition: background-color 0.4s;
-}
+[v-cloak] {display: none}
 
-.tuyoi {
-    color: red;
-}
+@keyframes cloak-in {
+    0% {
+      opacity: 0;
+    }
+  }
+  #app {
+    animation: cloak-in 1s;
+  }
+  #app[v-cloak] {
+    opacity: 0;
+  }
