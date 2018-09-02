@@ -8,9 +8,10 @@
 <body>
   <div id="app">
     <!-- この#appの内側にテンプレートを書き込んでいく -->
-    <div v-if="ok">v-if条件による描画</div>
-    <div v-show="ok">v-show条件による表示</div>
-
+    <li v-for="item in list" v-bind:key="item.id" v-bind:class="{ tuyoi: item.hp > 300 }">
+      ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+      <span v-if="item.hp > 300">つよい！</span>
+    </li>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
